@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <Folder Include="System.Collections.ObjectModel\" />
-    <Folder Include="System\" />
+    <Folder Include="System.Linq.Expressions\" />
   </ItemGroup>
 
 </Project>
