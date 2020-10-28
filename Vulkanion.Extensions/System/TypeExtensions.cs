@@ -5,18 +5,20 @@ using System.Reflection;
 
 namespace Vulkanion.Extensions.System
 {
-    internal static class TypeExtensions
+    public static class TypeExtensions
     {
-        internal static Type GetElementTypeForExpression(this Type seqType)
+        public static Type GetElementTypeForExpression(this Type seqType)
         {
             var enumerableType = FindIEnumerableType(seqType);
             return enumerableType == null ? seqType : enumerableType.GetGenericArguments()[0];
         }
-        internal static MethodInfo GetGenericMethod(this Type owner, string methodName)
+
+        public static MethodInfo GetGenericMethod(this Type owner, string methodName)
         {
             return owner.GetMethods().SingleOrDefault(m => m.Name == methodName && m.IsGenericMethod);
         }
-        private static Type FindIEnumerableType(Type seqType)
+
+        public static Type FindIEnumerableType(Type seqType)
         {
             if(seqType == null || seqType == typeof(string))
                 return null;

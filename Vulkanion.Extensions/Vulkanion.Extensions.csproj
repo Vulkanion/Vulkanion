@@ -1,12 +1,32 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>
+      netstandard2.1;
+      netstandard2.0;
+      netcoreapp3.1;
+      netcoreapp2.1;
+      net45;
+      net451;
+      net452;
+      net46;
+      net461;
+      net462;
+      net47;
+      net471;
+      net472;
+      net48;
+    </TargetFrameworks>
+    <Authors>Mads Mikkel Rasmussen</Authors>
+    <Company>Vulkanion</Company>
+    <Description>Extends types the .NET System namespace.</Description>
+    <PackageReleaseNotes>The following types were extended:
+* System.Type
+* IEnummerable&lt;T&gt;
+* System.Collections.ObjectModel.ObservableCollection&lt;T&gt;</PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/Vulkanion/Vulkanion</RepositoryUrl>
+    <RepositoryType>public forkable</RepositoryType>
+    <PackageTags>System,</PackageTags>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Folder Include="System.Collections.ObjectModel\" />
-    <Folder Include="System.Linq.Expressions\" />
-  </ItemGroup>
 
 </Project>
